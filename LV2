@@ -1,0 +1,60 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package prvi_zadatak.labvje2;
+
+/**
+ *
+ * @author Krisla
+ */
+public class Zarulja {      //Klasa Zarulja
+    
+    private boolean Stanje; //Privatni ČLAN tipa bool
+    
+    Zarulja(){              //defaultni konstriktor
+        Stanje = false;     //koji postavlja stanje na false
+    }
+    
+    public void PritisniPrekidac(){ //Javna klasa koja pali igasi zarulju
+    
+    if(Stanje == false){
+   
+        Stanje = true;
+        
+    }else{
+        Stanje = false;
+     }
+    
+    }
+        
+    public void Provjeri(){     //Ispisuje dal svijetli
+        
+        if(Stanje == false){
+            System.out.println("Zarulja ne svijetli");
+        }else{
+            System.out.println("Zarulja svijetli");
+       
+        }
+    
+}
+    public static void main(String[]args){
+        
+        Zarulja Osram = new Zarulja();
+        
+        Osram.PritisniPrekidac();   //nekoliko paljenja i gašenja
+        Osram.Provjeri();
+        
+        Osram.PritisniPrekidac();
+        Osram.Provjeri();
+        
+        Osram.PritisniPrekidac();
+        Osram.Provjeri();
+        
+        Osram.PritisniPrekidac();
+        Osram.Provjeri();
+    }
+    
+    
+}
