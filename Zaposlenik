@@ -1,0 +1,84 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package prvi_zadatak.labvje2;
+
+/**
+ *
+ * @author Krisla
+ */
+public class Zaposlenik {
+    
+    private int staz;
+    private int starost;
+    private double placa;
+    
+    Zaposlenik(){
+    
+        staz = 0;
+        starost = 0;
+        placa = 0;
+    
+}
+    /*
+    Zaposlenik(int staz, int starost, double placa){
+        this.staz=staz;
+        this.starost=starost;
+        this.placa=placa;
+        
+    }
+    */
+   public int getStaz() { //dohvaća  metoda
+        return staz;
+    }
+
+    public void setStaz(int staz) { //postavlja metoda
+        this.staz = staz;
+    }
+
+    public int getStarost() {
+        return starost;
+    }
+
+    public void setStarost(int starost) {
+        this.starost = starost;
+    }
+
+    public double getPlaca() {
+        System.out.println(placa);
+        return placa;
+       
+        
+    }
+
+    public void setPlaca(double placa) { //
+        this.placa = placa;
+}
+    
+    
+  public double izracunZarade(){ //izračun plaće
+        return (placa*staz*12);
+    }
+    
+    public static double izracunZarade(Zaposlenik var){
+        return (var.placa*var.staz*12);
+    }
+
+public static void main(String[]args){
+        
+        Zaposlenik Jaran = new Zaposlenik();
+       
+        Jaran.setStaz(22);
+        Jaran.setStarost(40);
+        Jaran.setPlaca(2800);
+
+        
+        Jaran.getPlaca();
+        
+        
+        
+}
+
+}
